@@ -16,3 +16,7 @@
 // });
 
 Route::get('/','PagesController@getHome');
+Route::get('admin/news/create','Admin\NewsController@add')->middleware('auth');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
